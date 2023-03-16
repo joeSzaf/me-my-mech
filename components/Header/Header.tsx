@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import HeaderWrapper, { DropdownLink, NavButton } from './Header.style';
+import HeaderWrapper, {
+  DropdownLink,
+  NavButton,
+  SmallHeaderLogoSection,
+} from './Header.style';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -7,15 +11,15 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import Image from 'next/image';
-import BadgerHubLogo from 'public/images/BadgerHubLogo.png';
+import Image from 'next/legacy/image';
+import MechLogo from 'public/images/mmmmai_logo.png';
 import Link from 'next/link';
 
 const pages = [
-  { name: 'About us', url: '/about' },
-  { name: 'Games', url: '/games' },
-  { name: 'Blog', url: '/blog' },
-  { name: 'Connect with us', url: 'https://twitter.com/BadgerHub' },
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+  { name: 'Media', url: '/media' },
+  { name: 'Contact', url: '/contact' },
 ];
 
 const Header = () => {
@@ -31,7 +35,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper position='sticky'>
-      <Container maxWidth='lg'>
+      <Container maxWidth='md'>
         <Toolbar disableGutters>
           <Box
             className='largeScreenHeader'
@@ -41,13 +45,12 @@ const Header = () => {
           >
             <Link href={'/'} className='logoSection'>
               <Image
-                alt='Badger Hub logo'
+                alt='Me, My Mech and I logo'
                 className='badgerLogo'
-                src={BadgerHubLogo}
-                width={60}
+                src={MechLogo}
+                width={320}
                 height={72}
               />
-              <h1 className='logoText'>Badger Hub</h1>
             </Link>
           </Box>
 
@@ -68,16 +71,15 @@ const Header = () => {
                 },
               }}
             >
-              <Link href={'/'} className='logoSection'>
+              <SmallHeaderLogoSection href={'/'} className='logoSection'>
                 <Image
                   alt='Badger Hub logo'
                   className='badgerLogo'
-                  src={BadgerHubLogo}
-                  width={60}
-                  height={72}
+                  src={MechLogo}
+                  style={{ objectFit: 'fill' }}
+                  layout='responsive'
                 />
-                <h1 className='logoText'>Badger Hub</h1>
-              </Link>
+              </SmallHeaderLogoSection>
             </Box>
             <IconButton
               size='large'

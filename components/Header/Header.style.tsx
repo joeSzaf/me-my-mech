@@ -1,40 +1,32 @@
 import styled from '@emotion/styled';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import Link from 'next/link';
 
 export const HeaderWrapper = styled(AppBar)`
   .largeScreenHeader {
-    padding: 8px 0;
+    padding: 16px 0;
   }
 
   .smallScreenHeader {
-    padding: 4px 0;
+    padding: 8px 0;
 
     .logoText {
       font-size: 32px;
       margin-left: 8px;
     }
 
-    @media screen and (max-width: 450px) {
-      .logoText {
-        font-size: 16px;
-        margin-left: 6px;
-      }
+    @media screen and (max-width: 900px) {
+      padding: 16px 0;
+      padding-left: 18px;
     }
   }
 
   .logoSection {
-    align-items: center;
-    color: inherit;
-    display: flex;
+    max-height: 72px;
 
     :hover {
       cursor: pointer;
-
-      .badgerLogo {
-        transform: rotate(-15deg);
-        transform-origin: bottom left;
-      }
     }
   }
 
@@ -65,6 +57,16 @@ export const DropdownLink = styled.h3`
   font-weight: 400;
   margin: 0;
   text-decoration: none;
+`;
+
+export const SmallHeaderLogoSection = styled(Link)`
+  height: 54px;
+  width: 240px;
+
+  @media screen and (max-width: 350px) {
+    height: 40.5px;
+    width: 180px;
+  }
 `;
 
 export default HeaderWrapper;
