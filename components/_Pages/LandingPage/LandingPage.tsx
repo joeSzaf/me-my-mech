@@ -1,13 +1,15 @@
-import FollowUsSection from './FollowUsSection/FollowUsSection';
+import WishlistSection from './WishlistSection/WishlistSection';
 import HeroSection from './HeroSection/HeroSection';
-import MailingListSection from './MailingListSection/MailingListSection';
+import SlideShowSection from './SlideShowSection/SlideShowSection';
+import FeaturesSection from './FeaturesSection/FeaturesSection';
 
 const LandingPage = () => {
   return (
     <main>
       <HeroSection />
-      <FollowUsSection />
-      <MailingListSection />
+      <WishlistSection />
+      <SlideShowSection />
+      <FeaturesSection />
     </main>
   );
 };

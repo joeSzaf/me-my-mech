@@ -1,47 +1,17 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
-import Slide from './Slide/Slide';
-import BoothImage from 'public/images/Booth.jpg';
-import PaxImage from 'public/images/Pax.jpg';
+import MechHeader from 'public/images/website_header_gradient_larger.png';
 import BigButton from 'components/_Atomic/BigButton/BigButton';
 import { ButtonContainer } from './HeroSection.style';
+import Image from 'next/legacy/image';
 
 const HeroSection = () => {
-  const items = [
-    {
-      name: 'Pax East',
-      description: 'See us at PAX East!',
-      image: PaxImage,
-    },
-    {
-      name: 'Me, My Mech and I',
-      description:
-        'Stop by out booth to play the latest demo of My, My Mech and I',
-      image: BoothImage,
-    },
-  ];
-
   return (
     <div>
-      <Carousel
-        autoPlay
-        infiniteLoop
-        showStatus={false}
-        showThumbs={false}
-        showIndicators={false}
-        interval={6000}
-      >
-        {items.map((item, i) => (
-          <Slide key={i} image={item.image} />
-        ))}
-      </Carousel>
-      <ButtonContainer>
-        <BigButton copy='Games' href='/games'></BigButton>
-        <BigButton
-          copy='PAX East'
-          href='https://east.paxsite.com/en-us/expo-hall/exhibitor-listing.html?gtID=561181&exhibitor-name=Badger-Hub'
-        ></BigButton>
-      </ButtonContainer>
+      <Image
+        alt='"Me, My Mech and I" logo and picture of a farmer, a mech, and a cat overlooking a farm with a destroyed city in the backgroun.'
+        src={MechHeader}
+        layout='responsive'
+        style={{ objectFit: 'fill' }}
+      />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const SocialIconWrapper = styled.div`
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: #1e5c5c;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -10,21 +10,21 @@ const SocialIconWrapper = styled.div`
   width: 48px;
 
   svg {
-    color: #5c5c5c;
+    color: #fff;
     path {
-      fill: #5c5c5c;
+      fill: #fff;
     }
     height: 32px;
   }
 
   :hover {
-    background-color: #f5f5f5;
+    background-color: #2d8b8b;
     cursor: pointer;
 
     svg {
-      color: #707070;
+      color: #fff;
       path {
-        fill: #707070;
+        fill: #fff;
       }
       height: 32px;
     }

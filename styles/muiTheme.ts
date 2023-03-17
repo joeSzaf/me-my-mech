@@ -4,10 +4,10 @@ const badgerHubThemeOptions: ThemeOptions = {
   palette: {
     mode: 'light',
     primary: {
-      main: '#363636',
+      main: '#2D1A00',
     },
     secondary: {
-      main: '#fbc02d',
+      main: '#1e5c5c',
     },
   },
   typography: {
